@@ -1,55 +1,55 @@
-recommends
-// "username", "avatar", "title", "desc"
+// recommends
+// // "username", "avatar", "title", "desc"
 
-ratelogs
-// "name", "rate", "code", "start", "end", "ratime"
+// ratelogs
+// // "name", "rate", "code", "start", "end", "ratime"
 
-favs
-// "noteId", "favtime"
+// favs
+// // "noteId", "favtime"
 
-orders
-// "noteId", "account", "settle", "ordertime"
+// orders
+// // "noteId", "account", "settle", "ordertime"
 
-user
--- --note
--- -- -- --chapter
--- -- -- -- -- --message
--- -- -- -- -- -- -- --comment
+// user
+// -- --note
+// -- -- -- --chapter
+// -- -- -- -- -- --message
+// -- -- -- -- -- -- -- --comment
 
-banner
+// banner
 
-guide
+// guide
 
-tag
+// tag
 
-cover
--- --note
+// cover
+// -- --note
 
-user
--- --txlog
-
-
-========================================= new =========================================
-User
-	=> Comment
-	=> Message
-	=> Note
-	=> Recommend
-	=> Txlog
-
-Banner
-
-Guide	=> Tag
-
-Note
-	=> Chapter
-		=> Message
-			=> Comment
-	-> Cover
-	=> Recommend
-	=> Tag
-	=> Txlog
+// user
+// -- --txlog
 
 
+// ========================================= new =========================================
+// User
+// 	=> Comment
+// 	=> Message
+// 	=> Note
+// 	=> Recommend
+// 	=> Txlog
 
-User	Recommend	Message	Comment	Guide	Txlog	Note	Banner	Tag	Cover	Chapter
+// Banner
+
+// Guide	=> Tag
+
+// Note
+// 	=> Chapter
+// 		=> Message
+// 			=> Comment
+// 	-> Cover
+// 	=> Recommend
+// 	=> Tag
+// 	=> Txlog
+
+
+
+// User	Recommend	Message	Comment	Guide	Txlog	Note	Banner	Tag	Cover	Chapter
