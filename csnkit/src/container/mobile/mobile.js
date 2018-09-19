@@ -114,12 +114,14 @@ class Mobile extends React.Component {
                 <WingBlank>
                     <List>
                         {this.props.msg ? <p className='error-msg'>{this.props.msg}</p> : null}
+                        <WhiteSpace />
                         <InputItem
                             type="phone"
                             placeholder="186 1234 1234"
                             onChange={v=>this.handleChangeMobile('mobile',v)}
                             value={this.state.mobile}
                         >手机号码</InputItem>
+                        <WhiteSpace />
                         <InputItem
                             type="number"
                             maxLength="6"
@@ -127,6 +129,7 @@ class Mobile extends React.Component {
                             onChange={v=>this.handleChangeCode('code',v)}
                             value={this.state.code}
                         >验证码</InputItem>
+                        <WhiteSpace />
                         <List.Item extra="未注册自动绑定">
                             <Button
                                 type="ghost"

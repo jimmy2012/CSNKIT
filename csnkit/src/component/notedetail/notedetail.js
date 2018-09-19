@@ -20,6 +20,7 @@ import {
 import * as formatContent from '../../util/util'
 import moment from 'moment'
 import checkImg from './check.png'
+import userImg from '../user/user.png'
 
 const getWbContent = (content) => {
     return <div dangerouslySetInnerHTML={formatContent.createMarkup(content)}/>
@@ -103,7 +104,7 @@ class Notedetail extends React.Component {
                                     return (
                                         <Item
                                             key={v._id}
-                                            thumb={<img src={v.userId.avatar.uri} alt={v.userId.user} />}
+                                            thumb={<img src={v.userId.avatar? v.userId.avatar.uri : userImg} alt={v.userId.user} />}
                                         >
                                             {v.userId.user}
                                         </Item>
@@ -126,7 +127,7 @@ class Notedetail extends React.Component {
                             >
                                 {note.summary}
                                 <Brief>
-                                    <img src={author ? author.avatar.uri : ''} alt='' />
+                                    <img src={author ? author.avatar ? author.avatar.uri : userImg : ''} alt='' />
                                     <span>{author ? author.realname : ''}</span>
                                 </Brief>
                             </Item>
@@ -137,11 +138,11 @@ class Notedetail extends React.Component {
                         extra={<div>
                             {
                                 buyers && buyers.length > 0 ? buyers.map(v=>{
-                                    return <img key={v._id} src={v.userId.avatar.uri} alt={v.userId.user} />
+                                    return <img key={v._id} src={v.userId.avatar? v.userId.avatar.uri : userImg} alt={v.userId.user} />
                                 }) : null
                             }
                         </div>}
-                        onClick={this.onShowModal('buyerModel')}
+                        onClick={buyers && buyers.length > 0 ? this.onShowModal('buyerModel') : null}
                     ></Footer>
                 </Card>
 
@@ -234,7 +235,7 @@ class Notedetail extends React.Component {
                                 <Card>
                                     <Header
                                         title={v.userId.user}
-                                        thumb={v.userId.avatar.uri}
+                                        thumb={v.userId.avatar ? v.userId.avatar.uri : userImg}
                                         thumbStyle={{
                                             width: '20px',
                                             height: '20px',

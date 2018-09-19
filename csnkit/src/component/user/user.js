@@ -4,6 +4,7 @@ import { Result, Badge, List, WhiteSpace, Modal } from 'antd-mobile'
 import browserCookie from 'browser-cookies'
 import {logoutSubmit} from '../../redux/user.redux'
 import {Redirect} from 'react-router-dom'
+import userImg from './user.png'
 import applyImg from './apply2.png'
 import writeImg from './write2.png'
 import msgImg from './msg.png'
@@ -41,7 +42,7 @@ class User extends React.Component {
         return props.user ? (
             <div id='user-page'>
                 <Result
-                    img={myImg(props.avatar.uri)}
+                    img={myImg(props.avatar? props.avatar.uri : userImg)}
                     title={props.user}
                     message={desc}
                 />

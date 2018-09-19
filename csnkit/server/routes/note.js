@@ -11,7 +11,7 @@ const Comment = models.getModel('comment')
 
 Router.get('/purchased', function(req, res) {
     const userid = req.cookies.userid
-    Txlog.find({userId: mongoose.Types.ObjectId(userid)},function(err, doc) {
+    Txlog.find({userId: mongoose.Types.ObjectId(userid)}, null, {sort:{creatime:-1}},function(err, doc) {
         if (err) {
             return res.json({code:1, msg: '后端出错了'})
         }
@@ -28,7 +28,7 @@ Router.get('/purchased', function(req, res) {
         if (!noteIds || noteIds.length === 0) {
             return res.json({code:0, data:[]})
         } else {
-            Note.find({_id:{$in:noteIds}}, function(en, dn) {
+            Note.find({_id:{$in:noteIds}}, null, {sort:{creatime:-1}}, function(en, dn) {
                 if (en) {
                     return res.json({code:1, msg: '后端出错了'})
                 }
@@ -52,7 +52,7 @@ Router.get('/purchased', function(req, res) {
 // INDEX
 // GET /list
 Router.get('/list', function(req, res) {
-    Note.find({onshelf: true}, function(err, doc) {
+    Note.find({onshelf: true}, null, {sort:{creatime:-1}}, function(err, doc) {
         if (err) {
             return res.json({code:1, msg: '后端出错了'})
         }
@@ -78,7 +78,7 @@ Router.get('/getmsgs/:id', function(req, res) {
     if (!chapterid) {
         return json.dumps({code:1})
     }
-    Message.find({chapterId: mongoose.Types.ObjectId(chapterid)}, function(err, doc) {
+    Message.find({chapterId: mongoose.Types.ObjectId(chapterid)}, null, {sort:{creatime:-1}}, function(err, doc) {
         if (err) {
             return res.json({code:1, msg: '后端出错了'})
         }
@@ -96,7 +96,7 @@ Router.get('/getcomments/:id', function(req, res) {
     if (!messageId) {
         return json.dumps({code:1})
     }
-    Comment.find({messageId: mongoose.Types.ObjectId(messageId)}, function(err, doc) {
+    Comment.find({messageId: mongoose.Types.ObjectId(messageId)}, null, {sort:{creatime:-1}}, function(err, doc) {
         if (err) {
             return res.json({code:1, msg: '后端出错了'})
         }
@@ -132,7 +132,7 @@ Router.get('/getblinks/:id', function(req, res) {
         if (!chapterIds || chapterIds.length === 0) {
             return res.json({code:0, data:[]})
         } else {
-            Message.find({chapterId:{$in:chapterIds}}, function(em, dm) {
+            Message.find({chapterId:{$in:chapterIds}}, null, {sort:{creatime:-1}}, function(em, dm) {
                 if (em) {
                     return res.json({code:1, msg: '后端出错了'})
                 }
@@ -171,7 +171,7 @@ Router.get('/getbuyers/:id', function(req, res) {
     if (!noteid) {
         return json.dumps({code:1})
     }
-    Txlog.find({noteId: mongoose.Types.ObjectId(noteid)},function(err, doc) {
+    Txlog.find({noteId: mongoose.Types.ObjectId(noteid)}, null, {sort:{creatime:-1}},function(err, doc) {
         if (err) {
             return res.json({code:1, msg: '后端出错了'})
         }
@@ -189,7 +189,7 @@ Router.get('/getchapters/:id', function(req, res) {
     if (!noteid) {
         return json.dumps({code:1})
     }
-    Chapter.find({noteId: mongoose.Types.ObjectId(noteid)}, function(err, doc) {
+    Chapter.find({noteId: mongoose.Types.ObjectId(noteid)}, null, {sort:{sort:1}},function(err, doc) {
         if (err) {
             return res.json({code:1, msg: '后端出错了'})
         }

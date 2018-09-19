@@ -5,6 +5,7 @@ import { getChapter, getMsgs, addMsg, getComments, addComment } from '../../redu
 import * as formatContent from '../../util/util'
 import moment from 'moment'
 import commentImg from './comment.png'
+import userImg from '../user/user.png'
 
 const getWbContent = (content) => {
     return <div dangerouslySetInnerHTML={formatContent.createMarkup(content)}/>
@@ -124,7 +125,7 @@ class Chapter extends React.Component {
                                         <Card key={v._id}>
                                             <Header
                                                 title={v.userId.user}
-                                                thumb={v.userId.avatar.uri}
+                                                thumb={v.userId.avatar ? v.userId.avatar.uri : userImg}
                                                 thumbStyle={{
                                                     width: '20px',
                                                     height: '20px',
@@ -176,7 +177,7 @@ class Chapter extends React.Component {
                                 <Card>
                                     <Header
                                         title={v.userId.user}
-                                        thumb={v.userId.avatar.uri}
+                                        thumb={v.userId.avatar ? v.userId.avatar.uri : userImg}
                                         thumbStyle={{
                                             width: '20px',
                                             height: '20px',
