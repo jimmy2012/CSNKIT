@@ -1,0 +1,56 @@
+{
+  "name": "txlog",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ratelog": {
+      "type": "string"
+    },
+    "reward": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "txlogsn": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "tradeno": {
+      "type": "string"
+    },
+    "creatime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    },
+    "note": {
+      "type": "belongsTo",
+      "model": "note",
+      "foreignKey": "noteId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

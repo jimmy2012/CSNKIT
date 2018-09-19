@@ -1,0 +1,131 @@
+{
+  "name": "user",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "groom": {
+      "type": "string"
+    },
+    "viplevel": {
+      "type": "string"
+    },
+    "user": {
+      "type": "string",
+      "required": true
+    },
+    "passwd": {
+      "type": "string"
+    },
+    "wxtoken": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "realname": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "object"
+    },
+    "job": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "publish": {
+      "type": "string"
+    },
+    "money": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "score": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "bank": {
+      "type": "string"
+    },
+    "bankuser": {
+      "type": "string"
+    },
+    "bankcard": {
+      "type": "string"
+    },
+    "reward": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "reader"
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "favs": {
+      "type": [
+        "string"
+      ]
+    },
+    "creatime": {
+      "type": "date"
+    },
+    "logintime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "comments": {
+      "type": "hasMany",
+      "model": "comment",
+      "foreignKey": "userId"
+    },
+    "messages": {
+      "type": "hasMany",
+      "model": "message",
+      "foreignKey": "userId"
+    },
+    "notes": {
+      "type": "hasMany",
+      "model": "note",
+      "foreignKey": "userId"
+    },
+    "recommends": {
+      "type": "hasMany",
+      "model": "recommend",
+      "foreignKey": "userId"
+    },
+    "txlogs": {
+      "type": "hasMany",
+      "model": "txlog",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

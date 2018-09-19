@@ -1,0 +1,104 @@
+{
+  "name": "note",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "tags": {
+      "type": [
+        "string"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "desc": {
+      "type": "string"
+    },
+    "learnfrom": {
+      "type": "string"
+    },
+    "suitable": {
+      "type": "string"
+    },
+    "recommends": {
+      "type": [
+        "string"
+      ]
+    },
+    "buyknow": {
+      "type": "string"
+    },
+    "ratelogs": {
+      "type": [
+        "string"
+      ]
+    },
+    "collect": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "saleout": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "changelogs": {
+      "type": [
+        "string"
+      ]
+    },
+    "onshelf": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+
+    "creatime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chapters": {
+      "type": "hasMany",
+      "model": "chapter",
+      "foreignKey": "noteId"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    },
+    "cover": {
+      "type": "belongsTo",
+      "model": "cover",
+      "foreignKey": "coverId"
+    },
+    "recommends": {
+      "type": "hasMany",
+      "model": "recommend",
+      "foreignKey": "noteId"
+    },
+    "txlogs": {
+      "type": "hasMany",
+      "model": "txlog",
+      "foreignKey": "noteId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "ckDS": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "csnkit",
+    "password": "",
+    "name": "ckDS",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

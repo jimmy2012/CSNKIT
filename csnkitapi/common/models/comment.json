@@ -1,0 +1,36 @@
+{
+  "name": "comment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "comment": {
+      "type": "string"
+    },
+    "blink": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "creatime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "message": {
+      "type": "belongsTo",
+      "model": "message",
+      "foreignKey": "messageId"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

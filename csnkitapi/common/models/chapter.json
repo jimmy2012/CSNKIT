@@ -1,0 +1,45 @@
+{
+  "name": "chapter",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "messages": {
+      "type": [
+        "string"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string"
+    },
+    "sort": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    },
+    "creatime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "messages": {
+      "type": "hasMany",
+      "model": "message",
+      "foreignKey": "chapterId"
+    },
+    "note": {
+      "type": "belongsTo",
+      "model": "note",
+      "foreignKey": "noteId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

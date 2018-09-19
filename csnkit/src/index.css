@@ -1,0 +1,345 @@
+#note-page .am-card-header-content {
+    flex: 3;
+    color: rgb(77, 75, 75);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#note-page .am-card-header-extra {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#note-page .am-list-item img {
+    width: 64px;
+    height: 90px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    box-shadow: darkgrey 2px 2px 6px 1px;
+}
+
+#note-page .am-card-body {
+    padding: 0 0 6px;
+}
+
+#note-page .am-list-item .am-list-line .am-list-brief {
+    color: #888;
+    font-size: 15px;
+    line-height: 1.2;
+    margin-top: 6px;
+    width: auto;
+    min-height: 64px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+#note-page .am-list-item .am-list-line .am-list-content {
+    font-size: 14px;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#note-page .am-list-brief {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#detail-page .am-card-header-content {
+    flex: 3;
+    color: rgb(77, 75, 75);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#detail-page .am-card-header-extra {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#detail-page .am-list-item img {
+    width: 64px;
+    height: 90px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    box-shadow: darkgrey 2px 2px 6px 1px;
+}
+
+#detail-page .am-card-body {
+    padding: 0 0 6px;
+}
+
+#detail-page .am-list-item .am-list-line .am-list-brief {
+    color: #888;
+    font-size: 15px;
+    line-height: 1.2;
+    margin-top: 6px;
+    width: auto;
+    min-height: 64px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+#detail-page .am-list-content {
+    font-size: 14px;
+    -o-text-overflow: ellipsis;
+    white-space: normal;
+}
+
+#detail-page .am-list-brief {
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #000;
+}
+
+#detail-page .am-list-brief span {
+    margin-left: 10px;
+}
+
+#detail-page .am-list-brief img {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    vertical-align: middle;
+    box-shadow: rgb(0, 0, 0) 0 0 0 0.9px;
+}
+
+#detail-page .am-list-header {
+    flex: 4;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#detail-page .am-card-header {
+    padding: 5px 5px;
+}
+
+#detail-page .am-card-footer-content div img {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    vertical-align: middle;
+}
+
+#detail-page .am-card-footer-extra img {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#detail-page .am-card-footer-content {
+    flex: 1;
+}
+
+#detail-page .am-card-footer-extra {
+    flex: 2;
+    text-align: left;
+}
+
+#detail-page .am-card-footer {
+    z-index: 58;
+}
+
+#detail-page .am-modal-wrap {
+    width: auto;
+}
+
+#chapter-page .am-list-header {
+    flex: 4;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#chapter-page .am-list-item .am-list-line .am-list-content {
+    font-size: 14px;
+    /* overflow: hidden; */
+    -o-text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
+    white-space: normal;
+}
+
+#chapter-page .am-textarea-label {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#chapter-page .am-textarea-control {
+    z-index: 28;
+}
+
+#chapter-page .am-list .am-list-body .am-textarea-label.am-textarea-label-5 {
+    width: 80px;
+}
+
+#chapter-page .am-textarea-control textarea {
+    font-size: 14px;
+}
+
+.am-modal-content {
+    text-align: left;
+}
+
+.am-modal-body .am-list-body .am-textarea-label {
+    font-size: 14px;
+}
+
+.am-modal-body .am-list-body .am-textarea-control textarea {
+    font-size: 14px;
+}
+
+.am-modal-body .am-list-content a span {
+    font-size: 14px;
+}
+
+.am-modal-body .am-list-body .am-textarea-label.am-textarea-label-5 {
+    width: 36px;
+}
+
+#profile-page .am-list-header {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+#profile-page .am-list-item .am-input-label {
+    font-size: 14px;
+}
+
+#profile-page .am-list-item {
+    height: 36px;
+    min-height: 36px;
+}
+
+#profile-page .am-input-control {
+    z-index: 18;
+}
+
+#profile-page .am-input-control input {
+    font-size: 14px;
+    color: #888;
+}
+
+#profile-page .am-list-item .am-list-line .am-list-content {
+    flex: 1 1;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    width: auto;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    padding-top: 32px;
+    padding-bottom: 6px;
+}
+
+#profile-page .am-wingblank a {
+    z-index: 18;
+}
+
+#author-page .am-list-header {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+#author-page .am-list-item .am-input-label {
+    font-size: 14px;
+}
+
+#author-page .am-list-item.am-input-item {
+    height: 36px;
+    min-height: 36px;
+}
+
+#author-page .am-input-control {
+    z-index: 18;
+}
+
+#author-page .am-input-control input {
+    font-size: 14px;
+    color: #888;
+}
+
+#author-page .am-textarea-label {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#author-page .am-textarea-control {
+    z-index: 28;
+}
+
+#author-page .am-list .am-list-body .am-textarea-label.am-textarea-label-5 {
+    width: 80px;
+}
+
+#author-page .am-textarea-control textarea {
+    font-size: 14px;
+}
+
+#author-page .am-wingblank a {
+    z-index: 28;
+}
+
+#user-page .am-result-pic img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    vertical-align: middle;
+}
+
+#user-page .am-list-item .am-list-line .am-list-content {
+    font-size: 14px;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#user-page .am-list-thumb img {
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0;
+}
+
+.error-msg {
+    font-size: 20px;
+    font-weight: 800;
+    color: brown;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.am-tab-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.fixd-header .am-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.am-navbar-left {
+    z-index: 28;
+}
+
+.am-tabs-tab-bar-wrap {
+    z-index: 12;
+}
+
+.page-content {
+    padding: 45px 5px;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "recommend",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "recommend": {
+      "type": "string"
+    },
+    "creatime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "note": {
+      "type": "belongsTo",
+      "model": "note",
+      "foreignKey": "noteId"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
